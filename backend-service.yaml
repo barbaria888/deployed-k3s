@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-svc
+spec:
+  type: NodePort        # Exposes service outside k3s
+  selector:
+    app: backend
+  ports:
+    - protocol: TCP
+      port: 5000        # internal backend port
+      targetPort: 5000  # container port
+      nodePort: 30080   # external port on node
