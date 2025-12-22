@@ -24,6 +24,3 @@ spec:
                 secretKeyRef:
                   name: backend-secret
                   key: MONGO_URI
-
-~                                                                                                                                                                                          
-~                                 
